@@ -5,8 +5,7 @@ HTMLWidgets.widget({
     var stage = new NGL.Stage(el.id);
     return {
       renderValue: function(x) {
-        var stringBlob = new Blob([x.data], {type: 'text/plain'});
-        stage.loadFile(stringBlob).then(function (component) {
+        stage.loadFile(x.data).then(function (component) {
           component.addRepresentation('cartoon');
           component.autoView();
         });

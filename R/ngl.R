@@ -7,10 +7,9 @@
 #' @export
 ngl <- function(pdbfile, width = NULL, height = NULL, elementId = NULL) {
 
-  data <- paste(readLines(pdbfile), collapse="\n")
   # forward options using x
   x = list(
-    data
+    data = pdbfile
   )
 
   # create widget
